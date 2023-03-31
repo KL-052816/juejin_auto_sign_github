@@ -14,6 +14,7 @@ const user = {
 const url = 'growth_api/v1/check_in';
 let errorNnum = 1;
 function juejin() {
+  juejinList()
   return new Promise((resolve, reject) => {
     instance.post(url, user).then((res) => {
       juejinLottery().then((msg) => {
@@ -31,6 +32,22 @@ function juejin() {
       }
     })
   })
+}
+const urlList = [
+  'tag_api/v1/query_category_briefs?aid=2608&uuid=7130907594448815627&spider=0&show_type=0',
+  'user_api/v1/author/recommend?aid=2608&uuid=7130907594448815627&spider=0&category_id=&cursor=0&limit=20',
+  'content_api/v1/column/selected_rank?aid=2608&uuid=7130907594448815627&spider=0',
+  'interact_api/v2/collectionset/collection_recommend_rank?aid=2608&uuid=7130907594448815627&spider=0',
+];
+function juejinList() {
+  urlList.forEach((url) => {
+    new Promise((resolve, reject) => {
+      instance.post(url, user).then((res) => {
+      }).catch((err) => {
+      })
+    })
+  })
+
 }
 const lotteryUrl = 'growth_api/v1/lottery/draw';
 function juejinLottery() {
