@@ -9,7 +9,6 @@ const user = {
   uuid: 7155390599892698657,
   spider: 0,
   _signature: '_02B4Z6wo00901C - ablAAAIDAt.H5I5KAA2gvnmrAAGjokWL7rpnlR5R79Banu5LzpGe0c2h.XPzHvK2ivbVnXPLGHatQ1pkvS8r1HX8VHjdcwaqrJgmnNHsKYmI6m7hZ0n3mNok1Oz2D2ZsH18',
-
 }
 const url = 'growth_api/v1/check_in';
 let errorNnum = 1;
